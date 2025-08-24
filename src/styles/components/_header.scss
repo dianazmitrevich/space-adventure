@@ -97,6 +97,7 @@ $component: "header";
             display: inline-flex;
             align-items: center;
             justify-content: center;
+            color: $color-text;
 
             @include hover-active {
                 opacity: 0.8;
