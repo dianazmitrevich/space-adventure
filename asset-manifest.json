@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/space-adventure/static/css/main.87599b6c.css",
-    "main.js": "/space-adventure/static/js/main.9e7a9d39.js",
+    "main.css": "/space-adventure/static/css/main.f723934d.css",
+    "main.js": "/space-adventure/static/js/main.400a0c8e.js",
     "static/media/cover-4.png": "/space-adventure/static/media/cover-4.b6968c7d470befea78f1.png",
     "static/media/cover-1.png": "/space-adventure/static/media/cover-1.356c17be204b8513a8f7.png",
     "static/media/cover-2.png": "/space-adventure/static/media/cover-2.d97257977bbb47575968.png",
@@ -23,13 +23,13 @@
     "static/media/Lato-Black.ttf": "/space-adventure/static/media/Lato-Black.57dee8aface5572f9101.ttf",
     "static/media/earth.avif": "/space-adventure/static/media/earth.46ac0311fd6418223c32.avif",
     "static/media/icon.png": "/space-adventure/static/media/icon.0e77f11992cbdced6e94.png",
-    "static/media/icons.svg": "/space-adventure/static/media/icons.8686a3355877ed41f046a30c68cb708a.svg",
+    "static/media/icons.svg": "/space-adventure/static/media/icons.5ca5930b1973687c1d7aae203cbadc9b.svg",
     "index.html": "/space-adventure/index.html",
-    "main.87599b6c.css.map": "/space-adventure/static/css/main.87599b6c.css.map",
-    "main.9e7a9d39.js.map": "/space-adventure/static/js/main.9e7a9d39.js.map"
+    "main.f723934d.css.map": "/space-adventure/static/css/main.f723934d.css.map",
+    "main.400a0c8e.js.map": "/space-adventure/static/js/main.400a0c8e.js.map"
   },
   "entrypoints": [
-    "static/css/main.87599b6c.css",
-    "static/js/main.9e7a9d39.js"
+    "static/css/main.f723934d.css",
+    "static/js/main.400a0c8e.js"
   ]
 }
