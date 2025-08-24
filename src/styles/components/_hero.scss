@@ -1,0 +1,149 @@
+$component: "hero";
+
+.#{$component} {
+    --bg-x: 50%;
+    --bg-y: 50%;
+    --tx: 0px;
+    --ty: 0px;
+
+    padding-top: 51.5px;
+    margin-top: 0;
+
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(15, 20, 32, 0.79) 100%),
+        image-set(
+            url("/assets/images/hero/cover.avif") type("image/avif"),
+            url("/assets/images/hero/cover.webp") type("image/webp"),
+            url("/assets/images/hero/cover.png") type("image/png")
+        );
+
+    background-size: 110%, cover;
+    background-position: center, var(--bg-x) var(--bg-y);
+    background-repeat: no-repeat, no-repeat;
+    transition: background-position 0.15s linear;
+
+    @include up($bp-mobile) {
+        padding-top: 69px;
+    }
+
+    @include up($bp-tablet) {
+        padding-top: 79px;
+        background-image: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(15, 20, 32, 0.79) 100%),
+            image-set(
+                url("/assets/images/hero/cover.avif") type("image/avif"),
+                url("/assets/images/hero/cover.webp") type("image/webp"),
+                url("/assets/images/hero/cover.png") type("image/png")
+            );
+    }
+
+    @include up($bp-desktop) {
+        background-size: cover, 110%;
+    }
+
+    &__wrapper {
+        padding-top: 230px;
+        padding-bottom: 44px;
+        position: relative;
+
+        @include up($bp-mobile) {
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+
+        @include up($bp-tablet) {
+            padding-top: 91px;
+            padding-bottom: 119px;
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 17px;
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        padding: 0 14px;
+
+        @include up($bp-mobile) {
+            gap: 22px;
+            padding: 0;
+            text-align: left;
+            align-items: flex-start;
+            max-width: 411px;
+        }
+
+        @include up($bp-tablet) {
+            max-width: 693px;
+        }
+    }
+
+    &__title {
+        font-weight: 900;
+        font-size: 36px;
+        line-height: 1;
+
+        @include up($bp-mobile) {
+            font-size: 48px;
+        }
+
+        @include up($bp-tablet) {
+            font-size: 72px;
+        }
+    }
+
+    &__subtitle {
+        font-weight: 900;
+        font-size: 16px;
+        line-height: 1.2;
+
+        @include up($bp-mobile) {
+            font-size: 22px;
+        }
+
+        @include up($bp-tablet) {
+            font-size: 32px;
+        }
+    }
+
+    &__image {
+        width: 300px;
+        position: absolute;
+        top: 80px;
+        right: calc((100vw - 300px) / 2 - 10px);
+        z-index: 0;
+        pointer-events: none;
+        will-change: transform;
+        transform: translate3d(var(--tx), calc(-50% + var(--ty)), 0);
+        transition: transform 0.15s linear;
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        @include down(360px) {
+            right: 20px;
+        }
+
+        @include up($bp-mobile) {
+            top: 50%;
+            right: -80px;
+        }
+
+        @include up($bp-tablet) {
+            width: 327px;
+            right: -10px;
+        }
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .#{$component} {
+        transition: none;
+        background-position: center, center !important;
+        --tx: 0px;
+        --ty: 0px;
+    }
+}

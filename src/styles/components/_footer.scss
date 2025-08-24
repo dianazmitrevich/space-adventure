@@ -1,0 +1,18 @@
+$component: "footer";
+
+.#{$component} {
+    padding: 19px;
+    background-color: $color-surface;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+
+    &__text {
+        color: $color-accent-yellow;
+        font-size: 18px;
+        font-weight: 900;
+    }
+}

@@ -1,0 +1,28 @@
+@mixin up($w) {
+    @media (min-width: ($w + 1)) {
+        @content;
+    }
+}
+
+@mixin down($w) {
+    @media (max-width: ($w - 1)) {
+        @content;
+    }
+}
+
+@mixin between($min, $max) {
+    @media (min-width: $min) and (max-width: ($max - 1)) {
+        @content;
+    }
+}
+
+@mixin hover-active {
+    &:hover,
+    &:focus-visible {
+        @content;
+    }
+
+    &:active {
+        @content;
+    }
+}

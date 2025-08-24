@@ -1,0 +1,40 @@
+$component: "btn";
+
+.#{$component} {
+    font-size: 16px;
+    outline: 2px solid $color-accent-yellow;
+    margin: 2px;
+    color: $color-accent-yellow;
+    border-radius: 100px;
+    width: fit-content;
+    padding: 5px 38px;
+    transition: $transition;
+    cursor: pointer;
+
+    @include hover-active {
+        outline-color: $color-accent-yellow-hover;
+        color: $color-accent-yellow-hover;
+    }
+
+    &-primary {
+        background-color: $color-accent-yellow;
+        color: $color-text-dark;
+
+        @include hover-active {
+            background-color: $color-accent-yellow-hover;
+            color: $color-text-dark;
+        }
+    }
+
+    @include up($bp-tablet) {
+        font-size: 22px;
+        padding: 12px 38px;
+    }
+
+    &-lg {
+        @include up($bp-mobile) {
+            font-size: 22px;
+            padding: 12px 38px;
+        }
+    }
+}

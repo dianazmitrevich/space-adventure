@@ -1,0 +1,133 @@
+$component: "offers";
+
+.#{$component} {
+    &__title {
+        margin-bottom: 30px;
+
+        @include up($bp-tablet) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__grid {
+        display: grid;
+        gap: 30px;
+        position: relative;
+        grid-template-columns: 1fr;
+
+        @include up($bp-mobile) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @include up($bp-tablet) {
+            gap: 40px;
+        }
+    }
+
+    &-card {
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: image-set(
+                var(--bg-avif) type("image/avif"),
+                var(--bg-webp) type("image/webp"),
+                var(--bg-png) type("image/png")
+            );
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            transition: transform 600ms cubic-bezier(0.22, 0.61, 0.36, 1);
+            will-change: transform;
+            z-index: 0;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(15, 20, 32, 0.79) 100%);
+            z-index: 1;
+        }
+
+        &__inner {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+            padding: 26px;
+            min-height: 100%;
+
+            &-wrap {
+                flex-grow: 1;
+            }
+
+            @include up($bp-tablet) {
+                padding: 35px;
+            }
+        }
+
+        &__title {
+            font-weight: 900;
+            font-size: 40px;
+            line-height: 1;
+            max-width: 246px;
+            margin-bottom: 22px;
+
+            @include up($bp-tablet) {
+                font-size: 46px;
+                max-width: 286px;
+            }
+        }
+
+        &__text {
+            font-weight: 900;
+            font-size: 16px;
+            line-height: 1.2;
+
+            @include up($bp-tablet) {
+                font-size: 24px;
+            }
+        }
+
+        @include hover-active {
+            &::before {
+                transform: scale(1.1);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            &::before {
+                transition: none;
+            }
+            &:hover::before {
+                transform: none;
+            }
+        }
+
+        &-wide {
+            @include up($bp-tablet) {
+                grid-column: 1 / -1;
+            }
+
+            .#{$component}-card__title {
+                @include up($bp-tablet) {
+                    max-width: 659px;
+                    font-size: 74px;
+                }
+            }
+
+            .#{$component}-card__text {
+                @include up($bp-tablet) {
+                    font-size: 26px;
+                }
+            }
+        }
+    }
+}

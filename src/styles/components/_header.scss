@@ -1,0 +1,108 @@
+$component: "header";
+
+.#{$component} {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%);
+    background: #000;
+    z-index: 9;
+
+    &__wrapper {
+        width: 100%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include up($bp-mobile) {
+            padding-top: 22px;
+            padding-bottom: 22px;
+        }
+    }
+
+    &__logo {
+        width: 71px;
+        height: 24px;
+        color: $color-accent-pink;
+
+        @include up($bp-tablet) {
+            width: 104px;
+            height: 35px;
+        }
+    }
+
+    &__nav {
+        align-items: center;
+        gap: 30px;
+        display: none;
+
+        @include up($bp-mobile) {
+            display: flex;
+        }
+    }
+
+    &__cart {
+        width: 24px;
+        height: 21px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    &__burger {
+        @include up($bp-mobile) {
+            display: none;
+        }
+
+        &:has(.#{$component}__burger-toggle:checked) {
+            .#{$component}__burger-frame {
+                right: 0;
+            }
+        }
+
+        &-open,
+        &-close {
+            cursor: pointer;
+            width: 32px;
+            height: 38px;
+            transition: $transition;
+
+            @include hover-active {
+                opacity: 0.8;
+            }
+        }
+
+        &-close {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        &-toggle {
+            position: absolute;
+            opacity: 0;
+            width: 0;
+            height: 0;
+            pointer-events: none;
+        }
+
+        &-frame {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            background: $color-surface;
+            min-height: 100svh;
+            min-width: 50vw;
+            padding: 10px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+            transition: $transition;
+        }
+    }
+}

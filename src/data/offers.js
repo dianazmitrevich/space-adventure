@@ -1,0 +1,38 @@
+export const offers = [
+    {
+        id: "1",
+        variant: "wide",
+        title: "Move the borders of reality!",
+        text: "Go on a space adventure - it's possible with us!",
+        ctaText: "Learn more",
+        ctaHref: "#",
+        bg: "cover-1",
+    },
+    {
+        id: "2",
+        variant: "normal",
+        title: "Space is not just stars and planets",
+        text: "Go on a space adventure",
+        ctaText: "Learn more",
+        ctaHref: "#",
+        bg: "cover-2",
+    },
+    {
+        id: "3",
+        variant: "normal",
+        title: "For those who dream of stars",
+        text: "Our offer: make your dream come true",
+        ctaText: "Learn more",
+        ctaHref: "#",
+        bg: "cover-3",
+    },
+    {
+        id: "4",
+        variant: "wide",
+        title: "Fulfill your fantastic dreams",
+        text: "Space has never been so close",
+        ctaText: "Learn more",
+        ctaHref: "#",
+        bg: "cover-4",
+    },
+];

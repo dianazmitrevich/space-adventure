@@ -1,0 +1,13 @@
+$component: "section";
+
+#{$component} {
+    margin: 50px 0;
+
+    @include up($bp-mobile) {
+        margin: 55px 0;
+    }
+
+    @include up($bp-tablet) {
+        margin: 60px 0;
+    }
+}

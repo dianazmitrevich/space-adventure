@@ -1,0 +1,66 @@
+$component: "info";
+
+.#{$component} {
+    &__title {
+        margin-bottom: 20px;
+
+        @include up($bp-mobile) {
+            margin-bottom: 13px;
+        }
+
+        @include up($bp-tablet) {
+            margin-bottom: 17px;
+        }
+    }
+
+    &__text {
+        opacity: 0.6;
+        font-size: 14px;
+        margin-top: 20px;
+
+        @include up($bp-mobile) {
+            font-size: 16px;
+            margin-top: 13px;
+        }
+
+        @include up($bp-tablet) {
+            font-size: 20px;
+            margin-top: 17px;
+        }
+    }
+
+    &__summary {
+        font-weight: 700;
+        font-size: 14px;
+        margin-top: 20px;
+        cursor: pointer;
+        color: $color-accent-yellow;
+        list-style: none;
+        transition: $transition;
+
+        @include up($bp-mobile) {
+            font-size: 16px;
+        }
+
+        @include up($bp-tablet) {
+            font-size: 20px;
+            margin-top: 17px;
+        }
+
+        @include hover-active {
+            color: $color-accent-yellow-hover;
+        }
+
+        &::-webkit-details-marker {
+            display: none;
+        }
+
+        &::after {
+            content: "Read more";
+        }
+    }
+
+    &__details[open] &__summary::after {
+        content: "Close";
+    }
+}

@@ -1,0 +1,41 @@
+$component: "nav";
+
+.#{$component} {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+
+    @include up($bp-mobile) {
+        flex-direction: row;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
+    &__item {
+        font-size: 18px;
+        cursor: pointer;
+        position: relative;
+        display: inline-block;
+
+        &::after {
+            content: attr(data-text);
+            position: absolute;
+            inset: 0;
+            background: $color-gradient;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            -webkit-text-fill-color: transparent;
+            opacity: 0;
+            transition: $transition;
+        }
+
+        @include hover-active {
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+}

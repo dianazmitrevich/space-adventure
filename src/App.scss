@@ -1,0 +1,16 @@
+@import "styles/abstracts/variables";
+@import "styles/abstracts/mixins";
+
+@import "styles/base/reset";
+@import "styles/base/globals";
+@import "styles/base/fonts";
+
+@import "styles/components/header";
+@import "styles/components/icon";
+@import "styles/components/nav";
+@import "styles/components/section";
+@import "styles/components/hero";
+@import "styles/components/btn";
+@import "styles/components/offers";
+@import "styles/components/info";
+@import "styles/components/footer";
