@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/space-adventure/static/css/main.87599b6c.css",
+    "main.js": "/space-adventure/static/js/main.9e7a9d39.js",
+    "static/media/cover-4.png": "/space-adventure/static/media/cover-4.b6968c7d470befea78f1.png",
+    "static/media/cover-1.png": "/space-adventure/static/media/cover-1.356c17be204b8513a8f7.png",
+    "static/media/cover-2.png": "/space-adventure/static/media/cover-2.d97257977bbb47575968.png",
+    "static/media/cover-3.png": "/space-adventure/static/media/cover-3.216ff540a626711f561a.png",
+    "static/media/cover.png": "/space-adventure/static/media/cover.28d83fb3de710b84db0d.png",
+    "static/media/earth.png": "/space-adventure/static/media/earth.d1e7116ecd51028f6cee.png",
+    "static/media/cover-4.webp": "/space-adventure/static/media/cover-4.460086b253553f409404.webp",
+    "static/media/cover.webp": "/space-adventure/static/media/cover.509502ffc38cae82d4da.webp",
+    "static/media/cover.avif": "/space-adventure/static/media/cover.77dd21c86dee0fffbd1b.avif",
+    "static/media/cover-1.webp": "/space-adventure/static/media/cover-1.af0151334641a776cdab.webp",
+    "static/media/cover-4.avif": "/space-adventure/static/media/cover-4.3c6d21a230fc413b63b8.avif",
+    "static/media/cover-3.webp": "/space-adventure/static/media/cover-3.27e3a5413ad21b18284a.webp",
+    "static/media/cover-2.webp": "/space-adventure/static/media/cover-2.f7da353aa4e2b2e66780.webp",
+    "static/media/cover-1.avif": "/space-adventure/static/media/cover-1.b40c38fd85a663b6ef08.avif",
+    "static/media/cover-3.avif": "/space-adventure/static/media/cover-3.24d20eae46cff371a272.avif",
+    "static/media/cover-2.avif": "/space-adventure/static/media/cover-2.629e16aa73ab53c2b2f1.avif",
+    "static/media/Lato-Bold.ttf": "/space-adventure/static/media/Lato-Bold.636be8de934918e38ed9.ttf",
+    "static/media/earth.webp": "/space-adventure/static/media/earth.991001f0e22686be5f89.webp",
+    "static/media/Lato-Black.ttf": "/space-adventure/static/media/Lato-Black.57dee8aface5572f9101.ttf",
+    "static/media/earth.avif": "/space-adventure/static/media/earth.46ac0311fd6418223c32.avif",
+    "static/media/icon.png": "/space-adventure/static/media/icon.0e77f11992cbdced6e94.png",
+    "static/media/icons.svg": "/space-adventure/static/media/icons.8686a3355877ed41f046a30c68cb708a.svg",
+    "index.html": "/space-adventure/index.html",
+    "main.87599b6c.css.map": "/space-adventure/static/css/main.87599b6c.css.map",
+    "main.9e7a9d39.js.map": "/space-adventure/static/js/main.9e7a9d39.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.87599b6c.css",
+    "static/js/main.9e7a9d39.js"
+  ]
+}
