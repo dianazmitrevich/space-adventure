@@ -17,9 +17,9 @@ function OffersCard({ bg, variant, title, text, ctaText, ctaHref }) {
                     <h3 className="offers-card__title">{title}</h3>
                     <p className="offers-card__text">{text}</p>
                 </div>
-                <a className="btn" href={ctaHref}>
+                <button className="btn" href={ctaHref}>
                     {ctaText}
-                </a>
+                </button>
             </div>
         </article>
     );

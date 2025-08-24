@@ -10,6 +10,11 @@ $component: "btn";
     padding: 5px 38px;
     transition: $transition;
     cursor: pointer;
+    background: transparent;
+    border: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
     @include hover-active {
         outline-color: $color-accent-yellow-hover;

@@ -95,9 +95,9 @@ export default function Hero() {
                     <div className="hero__subtitle">
                         Where the possibilities are <span className="color-yellow">endless!</span>
                     </div>
-                    <a className="hero__btn btn btn-lg btn-primary" href="#">
+                    <button className="hero__btn btn btn-lg btn-primary" href="#">
                         Learn more
-                    </a>
+                    </button>
                 </div>
                 <picture className="hero__image">
                     <source srcSet={planetAvif} type="image/avif" />
