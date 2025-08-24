@@ -79,7 +79,7 @@ $component: "header";
             display: none;
         }
 
-        &:has(.#{$component}__burger-toggle:checked) {
+        &-opened {
             .#{$component}__burger-frame {
                 right: 0;
             }
@@ -91,6 +91,12 @@ $component: "header";
             width: 32px;
             height: 38px;
             transition: $transition;
+            background: transparent;
+            border: 0;
+            padding: 0;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
 
             @include hover-active {
                 opacity: 0.8;
@@ -101,14 +107,6 @@ $component: "header";
             width: 100%;
             display: flex;
             justify-content: flex-end;
-        }
-
-        &-toggle {
-            position: absolute;
-            opacity: 0;
-            width: 0;
-            height: 0;
-            pointer-events: none;
         }
 
         &-frame {

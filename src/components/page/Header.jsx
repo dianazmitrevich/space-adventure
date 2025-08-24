@@ -1,6 +1,7 @@
+import { useEffect, useState, memo, useRef } from "react";
 import Icon from "components/UI/Icon/Icon";
 
-function HeaderNav() {
+const HeaderNav = memo(function HeaderNav() {
     return (
         <>
             <nav className="nav">
@@ -16,9 +17,42 @@ function HeaderNav() {
             </div>
         </>
     );
-}
+});
 
 export default function Header() {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const frameRef = useRef(null);
+    const openBtnRef = useRef(null);
+
+    useEffect(() => {
+        if (!isOpen) return;
+
+        const onKey = (e) => {
+            if (e.key === "Escape") setIsOpen(false);
+        };
+
+        const onDown = (e) => {
+            const el = frameRef.current;
+
+            if (el && !el.contains(e.target)) setIsOpen(false);
+        };
+
+        document.addEventListener("keydown", onKey);
+        document.addEventListener("mousedown", onDown);
+
+        return () => {
+            document.removeEventListener("keydown", onKey);
+            document.removeEventListener("mousedown", onDown);
+        };
+    }, [isOpen]);
+
+    useEffect(() => {
+        document.body.style.overflow = isOpen ? "hidden" : "";
+
+        return () => (document.body.style.overflow = "");
+    }, [isOpen]);
+
     return (
         <header className="header">
             <div className="header__wrapper container">
@@ -28,20 +62,31 @@ export default function Header() {
                 <div className="header__nav">
                     <HeaderNav />
                 </div>
-                <div className="header__burger">
-                    <input
-                        type="checkbox"
-                        id="burger-toggle"
-                        className="header__burger-toggle"
-                        aria-label="Toggle navigation menu"
-                    />
-                    <label htmlFor="burger-toggle" className="header__burger-open">
+                <div className={`header__burger${isOpen ? " header__burger-opened" : ""}`}>
+                    <button
+                        ref={openBtnRef}
+                        type="button"
+                        className="header__burger-open"
+                        aria-label="Open menu"
+                        aria-controls="mobile-menu"
+                        aria-expanded={isOpen}
+                        onClick={() => setIsOpen(true)}>
                         <Icon name="menu" width={32} height={38} title="Open menu" />
-                    </label>
-                    <div className="header__burger-frame">
-                        <label htmlFor="burger-toggle" className="header__burger-close">
+                    </button>
+                    <div
+                        id="mobile-menu"
+                        ref={frameRef}
+                        className="header__burger-frame"
+                        role="dialog"
+                        aria-modal="true"
+                        aria-label="Navigation">
+                        <button
+                            type="button"
+                            className="header__burger-close"
+                            aria-label="Close menu"
+                            onClick={() => setIsOpen(false)}>
                             <Icon name="close" width={32} height={38} title="Close menu" />
-                        </label>
+                        </button>
                         <HeaderNav />
                     </div>
                 </div>
