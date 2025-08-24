@@ -1,35 +1,19 @@
 import React, { useState } from "react";
 import spriteUrl from "assets/svg/icons.svg";
 
-export default function Icon({ name, hoverName, className = "", width = 24, height = 24, title }) {
-    const [isHovered, setIsHovered] = useState(false);
-
-    const hasHover = Boolean(hoverName);
-
+export default function Icon({ name, className = "", width = 24, height = 24, title }) {
     return (
         <div
             className={`icon-wrapper ${className}`}
-            style={{ aspectRatio: width / height, width: "auto", height: "inherit" }}
-            onMouseEnter={() => hasHover && setIsHovered(true)}
-            onMouseLeave={() => hasHover && setIsHovered(false)}>
+            style={{ aspectRatio: width / height, width: "auto", height: "inherit" }}>
             <svg
-                className={`icon-layer ${!hasHover || !isHovered ? "visible" : "hidden"}`}
+                className={`icon-layer`}
                 style={{ width: "inherit", height: "inherit" }}
                 aria-hidden={title ? "false" : "true"}
                 role="img">
                 {title && <title>{title}</title>}
                 <use href={`${spriteUrl}#${name}`} />
             </svg>
-
-            {hasHover && (
-                <svg
-                    className={`icon-layer ${isHovered ? "visible" : "hidden"}`}
-                    width={width}
-                    height={height}
-                    aria-hidden="true">
-                    <use href={`${spriteUrl}#${hoverName}`} />
-                </svg>
-            )}
         </div>
     );
 }

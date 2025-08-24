@@ -51,6 +51,27 @@ $component: "header";
         align-items: center;
         justify-content: center;
         cursor: pointer;
+        position: relative;
+
+        &:after {
+            position: absolute;
+            content: "";
+            width: 24px;
+            height: 21px;
+            background: $color-gradient;
+            mix-blend-mode: multiply;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: $transition;
+            pointer-events: none;
+        }
+
+        @include hover-active {
+            &::after {
+                opacity: 1;
+            }
+        }
     }
 
     &__burger {

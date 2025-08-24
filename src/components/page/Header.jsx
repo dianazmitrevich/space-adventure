@@ -12,14 +12,7 @@ function HeaderNav() {
                 </div>
             </nav>
             <div className="header__cart" aria-label="Cart">
-                <Icon
-                    name="cart-default"
-                    hoverName="cart-gradient"
-                    className="header__cart-icon"
-                    width={24}
-                    height={21}
-                    title="Cart icon"
-                />
+                <Icon name="cart" className="header__cart-icon" width={24} height={21} title="Cart icon" />
             </div>
         </>
     );
