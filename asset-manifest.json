@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/space-adventure/static/css/main.92045916.css",
+    "main.css": "/space-adventure/static/css/main.9236c2fc.css",
     "main.js": "/space-adventure/static/js/main.400a0c8e.js",
     "static/media/cover-4.png": "/space-adventure/static/media/cover-4.b6968c7d470befea78f1.png",
     "static/media/cover-1.png": "/space-adventure/static/media/cover-1.356c17be204b8513a8f7.png",
@@ -25,11 +25,11 @@
     "static/media/icon.png": "/space-adventure/static/media/icon.0e77f11992cbdced6e94.png",
     "static/media/icons.svg": "/space-adventure/static/media/icons.5ca5930b1973687c1d7aae203cbadc9b.svg",
     "index.html": "/space-adventure/index.html",
-    "main.92045916.css.map": "/space-adventure/static/css/main.92045916.css.map",
+    "main.9236c2fc.css.map": "/space-adventure/static/css/main.9236c2fc.css.map",
     "main.400a0c8e.js.map": "/space-adventure/static/js/main.400a0c8e.js.map"
   },
   "entrypoints": [
-    "static/css/main.92045916.css",
+    "static/css/main.9236c2fc.css",
     "static/js/main.400a0c8e.js"
   ]
 }
